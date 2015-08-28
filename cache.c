@@ -8,7 +8,7 @@ void printTopBottom(int * end_spaces, int cachesize);
 void printValues(int * current_nums, int cachesize);
 int main(int argc, char ** argv) {
   if(argc != 2) {
-    fprintf(stderr, "Usage: %s <int>", argv[0]);
+    fprintf(stderr, "Usage: %s <int>\n", argv[0]);
     return EXIT_FAILURE;
   }
   int cachesize = atoi(argv[1]);
