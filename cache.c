@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
         fgets(input_buffer, MAX_DIGITS, stdin);
         num = atoi(input_buffer);
         if (num <= 0) {
+			free(input_buffer);
             break;
         }
         int num_index = num % cachesize;
@@ -49,6 +50,7 @@ int main(int argc, char** argv) {
         free(input_buffer);
     }
     printf("Exiting.");
+	free(values);
     return EXIT_SUCCESS;
 }
 void printCache(int * values, int cachesize) {
